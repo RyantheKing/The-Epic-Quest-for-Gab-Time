@@ -38,6 +38,6 @@ class Player(pygame.sprite.Sprite):
         Player.image["left"] = pygame.transform.scale(Player.image["left"], (display["scale"]*Player.info["width"], display["scale"]*Player.info["height"]))
 
         self.rect = Player.image["right"].get_rect()
-        self.rect.y = 125
-        self.rect.x = 125
+        self.rect.y = 0
+        self.rect.x = 0
         self.image = Player.image["right"]
