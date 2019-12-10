@@ -20,19 +20,22 @@ player = Player()
 player.image = Player.image["right"]
 all_sprites_list.add(player)
 
+background = pygame.image.load("background.png").convert() #background image
+background = pygame.transform.scale(background, (display["width"], display['height'])) #scaling up to display size
+
 sprite_names = {
     "player": player,
 }
 
 # The Main game loop
 while True:
-    pygame.time.delay(30)
+    pygame.time.delay(33) #30 fps lock
     win.fill(BLACK)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             break
-
+    win.blit(background, [0, 0]) #display background
     #all_sprites_list.update()
 
     events.checkKeys(sprite_names)
