@@ -8,14 +8,14 @@ class Player(pygame.sprite.Sprite):
     It derives from the "Sprite" class in Pygame
     """
     info = {
-        "y": 200,
-        "x": 200,
-        "velocity": 5,
+        "y": 0,
+        "x": 0,
+        "velocity": display["scale"],
         "width": 10,
         "height": 27
     }
 
-    image = {
+    image = {  # defining list do not edit
         "up": None,
         "down": None,
         "left": None,
@@ -38,6 +38,6 @@ class Player(pygame.sprite.Sprite):
         Player.image["left"] = pygame.transform.scale(Player.image["left"], (display["scale"]*Player.info["width"], display["scale"]*Player.info["height"]))
 
         self.rect = Player.image["right"].get_rect()
-        self.rect.y = 300
-        self.rect.x = 400
+        self.rect.y = 125
+        self.rect.x = 125
         self.image = Player.image["right"]
