@@ -21,3 +21,4 @@ def checkKeys(sprite_names):
 
 def checkAll(sprite_names):
     checkKeys()
+   
